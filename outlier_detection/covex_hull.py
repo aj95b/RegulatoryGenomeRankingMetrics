@@ -26,6 +26,7 @@ def embed_hull(data_matrix):
 	plt.plot(emb_df.iloc[hull.vertices[0],0],emb_df.iloc[hull.vertices[0],1], 'ro')
 	plt.show()                                                                                                                                
   
+
 def main():
 	dhs_data = read_data()
 	embed_hull(dhs_data)
