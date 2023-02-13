@@ -1,5 +1,5 @@
 import pandas as pd
-from read_data_global_variables import read_signal_matrix
+from information_metrics.read_data_global_variables import read_signal_matrix
 
 def normalize_signal():
   signal = read_signal_matrix()
