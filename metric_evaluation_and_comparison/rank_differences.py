@@ -24,7 +24,7 @@ def evaluate_realtive_metric_rank(srtd_metric1=sys.argv[1],srtd_metric2=sys.argv
 		print(1 + metric2.index[metric2['dhs_index']==j][0])
     
 
-def relative_rank_difference(srtd_metric1=sys.argv[1],srtd_metric2=sys.argv[2],comp_index=int(sys.argv[3])):
+def relative_rank_difference_rbo(srtd_metric1=sys.argv[1],srtd_metric2=sys.argv[2],comp_index=int(sys.argv[3])):
 	#Parameters:
 	#1. Path to first sorted metric file (likely from biased end of the spectrum)
 	#2. Path to second sorted metric file (likely from unbiased end of the spectrum)
