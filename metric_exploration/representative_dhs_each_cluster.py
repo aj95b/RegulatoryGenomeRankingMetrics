@@ -88,9 +88,7 @@ def individual_clusts(clust_center_dhs,vocab,biosample_cos,ind_of_min_dist):
 				sum_cos_similarity += biosample_cos.iloc[i,j]
 	M = len(biosample_indices[0])
 	mean_cos_similarity = sum_cos_similarity/(M*(M-1)*0.5)
-	print(vocab.iloc[ind_of_min_dist,0],end='\t')
-	print(vocab.iloc[ind_of_min_dist,1],end='\t')
-	print(vocab.iloc[ind_of_min_dist,2],end='\t')
+	print(vocab.iloc[ind_of_min_dist,0:2],end='\t')
 	print(vocab.component[ind_of_min_dist],end='\t')
 	print(vocab.numsamples[ind_of_min_dist],end='\t')
 	print(mean_cos_similarity)
