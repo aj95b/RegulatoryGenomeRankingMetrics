@@ -1,7 +1,7 @@
 from read_data_global_variables import *
 
 def concordance_metric(dhs_data):
-	dhs_data = read_pres_abs_matrix()
+	dhs_data = sys.argv[1] #Path to presence absence matrix
 	mix = read_mixture_matrix()
 	basis = read_basis_matrix()
 	calls = read_aclls()
