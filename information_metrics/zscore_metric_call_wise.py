@@ -4,6 +4,7 @@ To mitigate this, we performed z-scoring on each given number of samples. It is 
 and there are many DHSs with the same number of samples. Z-scoring at each value of the number of samples makes the metric less dependent on the number
 of samples.
 '''
+
 from read_data_global_variables import *
 
 #After executing the function, sort the file with dhs_index, to obtain z-scoring with genomic index wise
