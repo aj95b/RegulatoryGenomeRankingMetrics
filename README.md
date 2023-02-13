@@ -16,7 +16,7 @@ Co-ranking just the SNR and MCS produced best results.
 ## metric_exploration
 We cluster the most highly ranked DHSs by each metric and order them optimally to create a heatmap to visualize the effect of ranking by each metic and find out of there is any cell-type specificity to the DHSs picked by a certain metric.
 ## metric_evaluation_and_comparison
-We compare the ranked lists from various metrics and compute the similarity in ranking using [Fisher exact statistic](https://en.wikipedia.org/wiki/Fisher%27s_exact_test), [Rank Biased Overlap] (http://blog.mobile.codalism.com/research/papers/wmz10_tois.pdf).
+We compare the ranked lists from various metrics and compute the similarity in ranking using [Fisher exact statistic](https://en.wikipedia.org/wiki/Fisher%27s_exact_test), [Rank Biased Overlap](http://blog.mobile.codalism.com/research/papers/wmz10_tois.pdf).
 ## 25kb_dhs_regions
 As a proof of concept to measure information content at scale, using the ranking metrics above, we divided the whole human genome into 25kb regions created as a result of using the chromatin states data that use an information theoretic metric to extract surprisal scores along the entire genome. We ranked the resulting approximately 100,000 regions based on:
    1. Their significance scores obtained using the mean co-ranks of DHSs in the region. Co-ranks based on the information metrics descrined above. Then         use the Central Limit Theorem to ascertain their significance.
