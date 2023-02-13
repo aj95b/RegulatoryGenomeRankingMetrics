@@ -1,6 +1,7 @@
 from read_data_global_variables import *
 
-def average_norm_signal(signal):
+def average_norm_signal():
+	signal = sys.argv[1] #Path to signal matrix
 	print("mean_normalized_signal")
 	f = open(signal,'r')
 	for dhs in f :
