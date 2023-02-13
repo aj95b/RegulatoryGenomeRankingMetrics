@@ -1,3 +1,9 @@
+import matplotlib.pyplot as plt
+from scipy.stats import gamma
+import scipy.cluster.hierarchy as sch
+from sklearn.cluster import AgglomerativeClustering
+from scipy.cluster import hierarchy
+import math
 from information_metrics.read_data_global_variables import *
 
 def make_heatmap_first_n_dhs():
