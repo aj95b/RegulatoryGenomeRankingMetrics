@@ -1,3 +1,5 @@
+from information_metrics.read_data_global_variables import *
+
 def make_heatmap_first_n_dhs():
 	#Parameters:
 	#1. Path to Normalized Signal
@@ -32,9 +34,9 @@ def make_heatmap_first_n_dhs():
 	#basis=basis.reset_index(drop=True)
 	###############################################################################################################################################################
 	
-  #Use hierarchical clustering for normalized sliced signal for 'n' DHSs
+        #Use hierarchical clustering for normalized sliced signal for 'n' DHSs
 	Z = hierarchy.ward(x)
-	#Order teh DHSs optimally
+	#Order the DHSs optimally
 	optimal_order = hierarchy.leaves_list(hierarchy.optimal_leaf_ordering(Z, x))
 	y = x.reindex(optimal_order)
 	
