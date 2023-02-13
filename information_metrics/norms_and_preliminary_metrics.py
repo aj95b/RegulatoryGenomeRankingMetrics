@@ -17,3 +17,10 @@ def info_all_dhs_signal(dhs_signal):
 		info_metric_1 = position_vect_manhattan*variance_vect
 		print(info_metric_1)	
 	f.close()
+
+def main():
+	dhs_data = sys.argv[1]
+	info_all_dhs_signal(dhs_data)
+			
+if __name__ == "__main__":
+    main()
