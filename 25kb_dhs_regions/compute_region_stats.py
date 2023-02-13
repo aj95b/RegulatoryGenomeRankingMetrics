@@ -103,7 +103,7 @@ def corank_regions():
 
 def main():
 	genome_fixed_size_region_info()
-  component_enrichment_per_region()
+	component_enrichment_per_region()
 	corank_regions()
 	
 	 	
