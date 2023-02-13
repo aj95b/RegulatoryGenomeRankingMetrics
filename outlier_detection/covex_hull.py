@@ -24,7 +24,18 @@ def embed_hull(data_matrix):
     
 	plt.plot(emb_df.iloc[hull.vertices,0],emb_df.iloc[hull.vertices,1], 'r--', lw=2)                                                                                                                                
 	plt.plot(emb_df.iloc[hull.vertices[0],0],emb_df.iloc[hull.vertices[0],1], 'ro')
-	plt.show()                                                                                                                                
+	plt.show()
+
+def component_wise_hull(dhs_data, dhs_vocab_path, nmf_component):
+    dhs_vocab = pd.read_table(dhs_vocab_path,sep='\t')
+    indices_of_interest = dhs_vocab.index[dhs_vocab['component'] == nmf_component].tolist()
+    mix_component = dhs_data.iloc[indices_of_interest,:]
+    pca = PCA(n_components=3)
+    component_pcs = pca.fit_transform(mix_component)
+    pcs_df = pd.DataFrame(data=component_pcs)
+    hull_component = ConvexHull(pcs_df)
+    plt.scatter(pc_df.iloc[:,0],pc_df.iloc[:,1])
+    plt.scatter(pc_df.iloc[hull_component.vertices,0],pc_df.iloc[hull_component.vertices,1], c='black') 
   
 
 def main():
